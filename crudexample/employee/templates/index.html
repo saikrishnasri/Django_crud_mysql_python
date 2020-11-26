@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}"/>  
 </head>  
 <body>  
-<form method="POST" class="post-form" action="/emp">  
+<form method="POST" class="post-form" action="/emp" enctype="multipart/form-data">  
         {% csrf_token %}  
     <div class="container">  
 <br>  
@@ -39,6 +39,11 @@
     <label class="col-sm-2 col-form-label">Employee Contact:</label>  
     <div class="col-sm-4">  
       {{ form.econtact }}  
+    </div>
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Employee Pic:</label>  
+    <div class="col-sm-4">  
+      {{ form.profilePic }}  
     </div>  
   </div>  
     <div class="form-group row">  
